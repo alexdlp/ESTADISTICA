@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 jupyter-book = "*"
 ghp-import = "*"
+matplotlib = "*"
+scipy = "*"
 
 [dev-packages]
 

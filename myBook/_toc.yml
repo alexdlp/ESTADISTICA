@@ -2,8 +2,19 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: 00_intro
+parts:
+  - caption: ESTADÍSTICA DESCRIPTIVA
+    numbered: True
+    chapters:
+    - file: 01_EstadisticaIntro
+
+  - caption: PROBABILIDAD
+    numbered: True  
+    chapters:
+    - file: 02_ProbIntro
+
+  - caption: PROCESOS ESTOCÁSTICOS
+    numbered: True  
+    chapters:
+    - file: 03_PEIntro
