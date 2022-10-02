@@ -365,7 +365,39 @@ title="Print to PDF"
      4.1.1. Procesos en tiempo discreto y continuo
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-de-estados-discretos-y-continuos">
+     4.1.2. Espacio de estados discretos y continuos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trayectorias-de-un-proceso">
+     4.1.3. Trayectorias de un proceso
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuciones-de-probabilidad-asociadas-a-un-proceso">
+     4.1.4. Distribuciones de probabilidad asociadas a un proceso
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribuciones-de-un-proceso-poisson">
+   4.2. Distribuciones de un proceso. Poisson
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cuestiones-de-existencia">
+     4.2.1. Cuestiones de existencia
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-proceso-de-poisson">
+   4.3. El proceso de Poisson
+  </a>
  </li>
 </ul>
 
@@ -396,7 +428,39 @@ title="Print to PDF"
      4.1.1. Procesos en tiempo discreto y continuo
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-de-estados-discretos-y-continuos">
+     4.1.2. Espacio de estados discretos y continuos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trayectorias-de-un-proceso">
+     4.1.3. Trayectorias de un proceso
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuciones-de-probabilidad-asociadas-a-un-proceso">
+     4.1.4. Distribuciones de probabilidad asociadas a un proceso
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribuciones-de-un-proceso-poisson">
+   4.2. Distribuciones de un proceso. Poisson
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cuestiones-de-existencia">
+     4.2.1. Cuestiones de existencia
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-proceso-de-poisson">
+   4.3. El proceso de Poisson
+  </a>
  </li>
 </ul>
 
@@ -419,40 +483,198 @@ title="Print to PDF"
 </ul>
 <section id="introduccion-a-los-procesos-estocasticos">
 <h2><span class="section-number">4.1. </span>Introducción a los procesos estocásticos<a class="headerlink" href="#introduccion-a-los-procesos-estocasticos" title="Permalink to this headline">#</a></h2>
-<p>Los procesos estocásticos tratan de modelizar situaciones que cambian en el tiempo y que están sometidas a las regas del azar. Este tipo de situaciones en las que interviene el azar tratamos de describirlas desde un punto de vista matemático.</p>
-<p>Desde un punto de vista matemático, un proceso estocástico es un conjunto de variables aleatorias que pertenecen a un índice temporal.
-$<span class="math notranslate nohighlight">\( \{Z_t, t \in I\} \)</span>$</p>
+<p>Los procesos estocásticos tratan de modelizar situaciones que cambian en el tiempo y cuya evolución está sometida a las reglas del azar.</p>
+<p>Desde un punto de vista matemático, un proceso estocástico es un conjunto de variables aleatorias <span class="math notranslate nohighlight">\(Z_t\)</span> que pertenecen a un índice temporal <span class="math notranslate nohighlight">\(I\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \{Z_t, t \in I\} \]</div>
 <p>Es decir, los instantes de tiempo en donde se observa el proceso están contenidos en el intervalo temporal <span class="math notranslate nohighlight">\(I\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(Z_t\)</span> puede representar:</p>
+<p><span class="math notranslate nohighlight">\(Z_t\)</span> es una variable aleatoria que puede representar:</p>
 <ul class="simple">
 <li><p>el número de clientes en una cola en el instante <span class="math notranslate nohighlight">\(t\)</span></p></li>
 <li><p>precio de un activo financiero en el instante <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>el número de reclamaciones que recibe una compañia en el instante <span class="math notranslate nohighlight">\(t\)</span></p></li>
 </ul>
+<div class="admonition-minirepaso-del-concepto-de-espacio-probabilistico admonition">
+<p class="admonition-title">Minirepaso del concepto de espacio probabilístico</p>
+<p>Un espacio probabilístico  <span class="math notranslate nohighlight">\((\Omega, \mathcal{F}, P)\)</span>  está compuesto de:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>En el caso de un dado: <span class="math notranslate nohighlight">\(\Omega = \{1,2,3,4,5,6\}\)</span></p>
+</aside>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Omega\)</span>: conjunto de posibles resultados de un experimento.</p></li>
+</ul>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Ejemplo: <span class="math notranslate nohighlight">\(A \in \mathcal{F} \)</span> siendo <span class="math notranslate nohighlight">\(A = \{número \hspace{1em} par\}\)</span></p>
+</aside>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{F}\)</span>: familia de subconjuntos/sucesos asociados al experimento.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Función de probabilidad definida sobre la familia de sucesos.</p></li>
+</ul>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><span class="math notranslate nohighlight">\(A\)</span> tiene una probabilidad asociada <span class="math notranslate nohighlight">\(P(A)\)</span></p>
+</aside>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}
+P:\mathcal{F}  \rightarrow [0,1] \\
+A \rightsquigarrow P(A)
+\end{split}\end{split}\]</div>
+</div>
 <section id="procesos-en-tiempo-discreto-y-continuo">
 <h3><span class="section-number">4.1.1. </span>Procesos en tiempo discreto y continuo<a class="headerlink" href="#procesos-en-tiempo-discreto-y-continuo" title="Permalink to this headline">#</a></h3>
-<p><span class="math notranslate nohighlight">\((\Omega, \mathcal{F}, P)\)</span> : Espacio Probabilístico</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\Omega\)</span>: conjunto de posibles resultados de un experimento. En el caso de un dado: <span class="math notranslate nohighlight">\(\Omega = \{1,2,3,4,5,6\}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathcal{F}\)</span>: familia de subconjuntos/sucesos asociados al experimento. Ejemplo: <span class="math notranslate nohighlight">\(A \in \mathcal{F} \)</span> siendo <span class="math notranslate nohighlight">\(A = \{número \hspace{1em} par\}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(P\)</span>: Función de probabilidad definida sobre la familia de sucesos. <span class="math notranslate nohighlight">\(P.\mathcal{F} \rightarrow [0,1]\)</span>, <span class="math notranslate nohighlight">\( A \rightsquigarrow P(A)\)</span> (<span class="math notranslate nohighlight">\(A\)</span> tiene una probabilidad asociada <span class="math notranslate nohighlight">\(P(A)\)</span>)</p></li>
-</ul>
-<p>Lo que tenemos sobre el espacio probabilístico son variables aleatorias <span class="math notranslate nohighlight">\(Z_t\)</span>, habiendo una variable aleatoria <span class="math notranslate nohighlight">\(Z_t\)</span> para cada <span class="math notranslate nohighlight">\(t \in I\)</span> definida sobre <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p>
+<p>En un proceso estocástico lo que tenemos sobre el espacio probabilístico son variables aleatorias <span class="math notranslate nohighlight">\(Z_t\)</span> definidas sobre <span class="math notranslate nohighlight">\(\Omega\)</span> y que toman valores en <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, habiendo una variable aleatoria <span class="math notranslate nohighlight">\(Z_t\)</span> para cada <span class="math notranslate nohighlight">\(t \in I\)</span></p>
 <div class="math notranslate nohighlight">
 \[Z_t:\Omega \rightarrow \mathbb{R} \]</div>
-<p>donde <span class="math notranslate nohighlight">\(Z_t\)</span> es la variable que estamos observando en el instante <span class="math notranslate nohighlight">\(t\)</span> (precio, número de personas en cola…) y que nos indica el <em>estado</em> del sistema en dicho instante.</p>
-<p>El conjunto de índices <span class="math notranslate nohighlight">\(I\)</span> suele ser un subconjunto de <span class="math notranslate nohighlight">\([0,\infty]\)</span>. Los casos más importantes: APUNTES</p>
-<p>Ejemplo sencillo de un proceso estocástico:
-Lanzo un dado 30 veces y anoto los resultados
-<span class="math notranslate nohighlight">\(\Omega = \{(w_1, ..., w_30\}\)</span>, donde <span class="math notranslate nohighlight">\(w_t\)</span> es el resultado del lanzamiento en el momento <span class="math notranslate nohighlight">\(t\)</span>.
-<span class="math notranslate nohighlight">\(\mathcal{F}\)</span>: familia de sucesos, partes de <span class="math notranslate nohighlight">\(\Omega\)</span>
-Proceso estocástico:
-$<span class="math notranslate nohighlight">\(\begin{equation}
+<p>donde <span class="math notranslate nohighlight">\(Z_t\)</span> es la variable que estamos observando en el instante <span class="math notranslate nohighlight">\(t\)</span> (precio, número de personas en cola…) y que nos indica el <em><strong>estado</strong></em> del sistema en dicho instante.</p>
+<p>El conjunto de índices <span class="math notranslate nohighlight">\(I\)</span> suele ser un subconjunto de <span class="math notranslate nohighlight">\([0,\infty]\)</span>.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(I\)</span> toma valores discretos (<span class="math notranslate nohighlight">\(I = {0,1,2,...}\)</span>) se dice que es un proceso en <strong>tiempo discreto</strong>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: número de clientes atendidos en una tienda el día <span class="math notranslate nohighlight">\(t\)</span>-ésimo</p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: lluvia o no eun una localidad el día <span class="math notranslate nohighlight">\(t\)</span>-ésimo</p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: precio en bolsa de un activo financiero <strong>al final</strong> del día <span class="math notranslate nohighlight">\(t\)</span>-ésimo</p></li>
+</ul>
+</li>
+<li><p>Si <span class="math notranslate nohighlight">\(I\)</span> toma valores continuos (<span class="math notranslate nohighlight">\(I = [0,\infty]\)</span>) se dice que es un proceso en <strong>tiempo continuo</strong>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: número de clientes esperando en una cola en el instante <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: número de reclamaciones en una compañía de seguros hasta el isntante <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_t\)</span>: precio en bolsa de un activo financiero en un instante de tiempo <span class="math notranslate nohighlight">\(t\)</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Ejemplo sencillo de un proceso estocástico</p>
+<p>Lanzo un dado 30 veces y anoto los resultados</p>
+<ul class="simple">
+<li><p>El espacio muestral <span class="math notranslate nohighlight">\(\Omega = \{(w_1, ..., w_{30}\}\)</span>, donde <span class="math notranslate nohighlight">\(w_t\)</span> es el resultado del lanzamiento en el momento <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{F}\)</span>: familia de sucesos, partes de <span class="math notranslate nohighlight">\(\Omega\)</span></p></li>
+</ul>
+<p>Por ejemplo, si quisiesemos saber la probabilidad de que en todos los lanzamiento saliese un número par:</p>
+<ul class="simple">
+<li><p>El suceso sería: <span class="math notranslate nohighlight">\(A = \{salir \hspace{0.5em} par \hspace{0.5em} siempre\}\)</span></p></li>
+<li><p>Este suceso <span class="math notranslate nohighlight">\(A\)</span> pertenecería a la familia de sucesos <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, <span class="math notranslate nohighlight">\(A \in \mathcal{F} \)</span></p></li>
+<li><p>El suceso <span class="math notranslate nohighlight">\(A\)</span> tendría una probabilidad asociada <span class="math notranslate nohighlight">\(P(A)\)</span> ( que sería igual a multiplicar <span class="math notranslate nohighlight">\(P({número \hspace{0.5em} par})\)</span>) por las veces que hayamos tirado el dado, en este caso 30. En este caso podemos hacer esto porque <em><strong>no tenemos correlación</strong></em> entre las distintas variables aleatorias <span class="math notranslate nohighlight">\(w_t\)</span></p></li>
+</ul>
+<p>El Proceso Estocástico sería el siguiente:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{split}
 Z_t : \Omega  \Rightarrow \mathbb{R} \\
 w \Rightarrow w_t
 \end{split}
-\end{equation}\)</span>$</p>
+\end{split}\]</div>
+</div>
 </section>
+<section id="espacio-de-estados-discretos-y-continuos">
+<h3><span class="section-number">4.1.2. </span>Espacio de estados discretos y continuos<a class="headerlink" href="#espacio-de-estados-discretos-y-continuos" title="Permalink to this headline">#</a></h3>
+<p>El espacio de estados <span class="math notranslate nohighlight">\(E\)</span> es el subconjunto de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> que contiene todos los valores posibles de las variables aleatorias.</p>
+<p>Esto <em>CREO</em> que es lo mismo que el dominio. Esta profe le llama distinto pero conceptualmente es lo mismo. En el lanzamiento de un dado, las variables aleatorias toman valores en <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, pero el espacio de estados es <span class="math notranslate nohighlight">\(\{1,2,3,4,5,6\}\)</span></p>
+<p>Según los valores que pueda tomar el espacoio de estados, este será discreto o continuo:</p>
+<ul class="simple">
+<li><p>Procesos con espacio de estados <span class="math notranslate nohighlight">\(E\)</span> <strong>discreto</strong>:</p>
+<ul>
+<li><p>Número de clientes esperando en una cola: <span class="math notranslate nohighlight">\(E= 1,2,...\)</span></p></li>
+<li><p>Registros diarios de lluvias: $E = {0(no \hspace{0.5}em lluvia), 1 (lluvia)}</p></li>
+</ul>
+</li>
+<li><p>Procesos con espacio de estados <span class="math notranslate nohighlight">\(E\)</span> <strong>continuo</strong>:</p>
+<ul>
+<li><p>Precio en bolsa de un activo financiero: <span class="math notranslate nohighlight">\(E = [0, \infty)\)</span></p></li>
+<li><p>Temperaturas máximas diarias en una localidad:  <span class="math notranslate nohighlight">\(E = [0, \infty)\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="trayectorias-de-un-proceso">
+<h3><span class="section-number">4.1.3. </span>Trayectorias de un proceso<a class="headerlink" href="#trayectorias-de-un-proceso" title="Permalink to this headline">#</a></h3>
+<p>Si estamos observando un proceso, en cada instante de tiempo, podemos anotar lo que ha sucedido.</p>
+<p>Dado un elemento del espacio muestral <span class="math notranslate nohighlight">\(w \in \Omega\)</span>, una trayectoria del proceso está constituída por los valores concretos que que va tomando el proceso sobre ese elemento del espacio muestral para cada instante de tiempo <span class="math notranslate nohighlight">\(\{Z_t(w), t \in I\}\)</span></p>
+<p>También se le puede llamar función muestral o realización. Vamos con un example:</p>
+<p>IMAGEN</p>
+<p>Para el ejemplo de la imagen, el inicio <span class="math notranslate nohighlight">\(0\)</span> correspondería con el instante en el que abrimos la compañía. La trayectoria desde <span class="math notranslate nohighlight">\(0\)</span> hasta <span class="math notranslate nohighlight">\(T_1\)</span> sería de 0 reclamaciones.
+Después de que pase un tiempo aleatorio <span class="math notranslate nohighlight">\(t_1\)</span> llega la primera reclamación, y el contador sube a 1. Se mantiene en 1 hasta que pasa otro tiempo aleatorio <span class="math notranslate nohighlight">\(t_2\)</span> en el que llega la segunda reclamación.</p>
+<p>Es decir, la trayectoria asociada a este proceso que describe el número de reclamaciones hasta el instante <span class="math notranslate nohighlight">\(t\)</span> es <strong>una función</strong> que va pegando saltos en instantes aleatorios dependiendo de cuando sucedan las reclamaciones.</p>
+</section>
+<section id="distribuciones-de-probabilidad-asociadas-a-un-proceso">
+<h3><span class="section-number">4.1.4. </span>Distribuciones de probabilidad asociadas a un proceso<a class="headerlink" href="#distribuciones-de-probabilidad-asociadas-a-un-proceso" title="Permalink to this headline">#</a></h3>
+<p>Cuando trabajamos con estas cosas, lo primero que tengo que hacer es definir lo que es un proceso estocástico.</p>
+<p>Después ya puedo calcular las probabilidades asociadas a ese proceso. Para ello hay que saber:</p>
+<ul class="simple">
+<li><p><strong>Cómo se distribuyen las variables aleatorias</strong></p></li>
+<li><p><strong>Cómo se relacionan entre sí</strong></p></li>
+</ul>
+<p>De esta manera, un proceso estocástico se describe mediante sus distribuciones finito-dimensionales.
+Es decir, dados instantes de tiempo pertenecientes al intervalo temporal, hay que indicar la distribución de las variables <span class="math notranslate nohighlight">\((Z_{t_1},..., Z_{t_n})\)</span></p>
+<div class="math notranslate nohighlight">
+\[(Z_{t_1},..., Z_{t_n}), \hspace{0.5em} para \hspace{0.5em} t_1,...,t_n \in I \]</div>
+<p>Si describo la distribución de probabilidades finito-dimensionales para cualesquiera intantes de tiempoy cualesquiera variables, hayaremos las distribuciones del proceso.</p>
+<p>Para los casos más sencillos me vale con dar la <strong>distribución de cada <span class="math notranslate nohighlight">\(Z_t\)</span></strong>, (se le llama marginal-unidimensional) y <strong>especificar las relaciones de dependencia</strong> de las variables del proceso.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Por ejemplo</p>
+<p><span class="math notranslate nohighlight">\(Z_t\)</span> resultado de del lanzamiento del dado en el instante <span class="math notranslate nohighlight">\(t\)</span> pues ya sé que es una variable que toma los valores <span class="math notranslate nohighlight">\(\{1,2,3,4,5,6\}\)</span> con <span class="math notranslate nohighlight">\(P = 1/6\)</span>. Eso sería la marginal unidimensional de cada <span class="math notranslate nohighlight">\(Z_t\)</span>.</p>
+<p>Y luego, para hacer cálculos globales que relacionen las variables del proceso, necesitaré especificar las relaciones de dependencia de las variables del proceso.</p>
+<p>En el ejemplo del dado es sencillo porque simplemente diciendo que todas las variables del proceso son independientes podría hacer cualquier cálculo.</p>
+<p>La probabilidad de salir par en todos los lanzamientos es igual al producto de la probabilidad de salir par en cada lanzamiento concreto. (Porque las variables son <strong>independientes</strong>)</p>
+<p>Entonces, sabiendo la distribución de las variables y su relación, ya podría calcular cualquier cosa de ese proceso.</p>
+<p>Normalmente las cosas no van a ser tan sencillas como en este ejemplo, porque las variables suelen tener relaciones de dependencia.</p>
+</div>
+</section>
+</section>
+<section id="distribuciones-de-un-proceso-poisson">
+<h2><span class="section-number">4.2. </span>Distribuciones de un proceso. Poisson<a class="headerlink" href="#distribuciones-de-un-proceso-poisson" title="Permalink to this headline">#</a></h2>
+<p>El proceso de Poisson es un proceso:</p>
+<ul class="simple">
+<li><p>en tiempo continuo <span class="math notranslate nohighlight">\(I = [0,\infty)\)</span></p></li>
+<li><p>con espacio de estados discreto <span class="math notranslate nohighlight">\(E = 1,2,...\)</span></p></li>
+</ul>
+<p>Es un proceso especialmente adecuado para describir, por ejemplo, el número de reclamaciones de una compañia de seguros.</p>
+<p>¿Cómo lo definimos? Las variables del proceso, que serán el número de reclamaciones recibidas hasta el instante <span class="math notranslate nohighlight">\(t\)</span> verificará:</p>
+<ul class="simple">
+<li><p>El incremento de reclamaciones entre dos instantes de tiempo <span class="math notranslate nohighlight">\((Z_{t_2}-Z_{t_1})\)</span> es una distrinbución de Poisson de parámetro <span class="math notranslate nohighlight">\(\lambda(t_1-t_2)\)</span></p></li>
+<li><p>Los incrementos del proceso son independientes</p></li>
+</ul>
+<p>De alguna manera, el proceso de Poisson ya tiene relaciones de dependencia entre las variables, pero el hecho de que los incrementos sean independientes, me facilitará mucho la tarea de hacer cálculos.</p>
+<section id="cuestiones-de-existencia">
+<h3><span class="section-number">4.2.1. </span>Cuestiones de existencia<a class="headerlink" href="#cuestiones-de-existencia" title="Permalink to this headline">#</a></h3>
+<p>A esta parte tampoco hay que hacerle mucho caso, es un poco fumada.</p>
+<p>Una vez espacifiquemos las distribuciones del proceso hay que asegurarse de <strong>la existencia</strong> de ese proceso estocástico para poder estudiarlo matematicamente. Para eso debemos encontrar:</p>
+<ul class="simple">
+<li><p>Un espacio probabilístico <span class="math notranslate nohighlight">\((\Omega,\mathcal{F} ,P)\)</span></p></li>
+<li><p>Sobre ese espacio probabilistico tendría que ser capaz de definir un conjunto de variables aleatorias <span class="math notranslate nohighlight">\(Z_t\)</span> de forma que sus distribuciones finito dimensionales sean las asociadas a <span class="math notranslate nohighlight">\((Z_{t_1},..., Z_{t_n}), \hspace{0.5em} para \hspace{0.5em} t_1,...,t_n \in I \)</span></p></li>
+</ul>
+<p>¿Cómo construímos procesos estocásticos? Hay un par de maneras:</p>
+<ul class="simple">
+<li><p>Con construcciones ad-hoc: Procesos de Poisson, Cadenas de Markov, Movimiento Browniano</p></li>
+<li><p>Resultados generales sobre la existencia: Teorema de Kolmogorov. Este teorema dice que que si asignas las probabilidades de modo consistente, viene el señor kolmogorov en persona a tu casa a garantizarte que existe un espacio probabilistico para que tu proceso estocastico se desarrolle tranquilamente.</p></li>
+</ul>
+<p>Pero vamos, que no es mi lucha.</p>
+</section>
+</section>
+<section id="el-proceso-de-poisson">
+<h2><span class="section-number">4.3. </span>El proceso de Poisson<a class="headerlink" href="#el-proceso-de-poisson" title="Permalink to this headline">#</a></h2>
+<p>El proceso de Poisson es un proceso de recuento.</p>
+<p>Un proceso de recuento es un proceso en tiempo continuo tal que <span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span></p>
+<p><span class="math notranslate nohighlight">\(N(t)\)</span> puede representar:</p>
+<ul class="simple">
+<li><p>número de coches que pasan por un determinado punto de una carretera</p></li>
+<li><p>número de clientes que llegan a una tienda</p></li>
+<li><p>número de reclamaciones de una compañia de seguros</p></li>
+</ul>
+<p>Es decir, un proceso de recuento es una sucesion de variables aleatorias <span class="math notranslate nohighlight">\(N(t)\)</span> cuyo espacio de estados es <span class="math notranslate nohighlight">\(\{0,1,2,3,...\}\)</span> porque van contando las cosas que pasan hasta un instante de tiempo.</p>
+<p>Pare definir algo que cuente las cosas que pasan hasta un instante de tiempo, ¿cuáles son las propiedades que le vamos a requerir a ese algo?</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(N(0) \geq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(N(t)\)</span> toman valores en <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, en los naturales.</p></li>
+<li><p>El proceso de recuento me cuenta lo que ha sucedido hasta el instante <span class="math notranslate nohighlight">\(t\)</span>, luego si un instante <span class="math notranslate nohighlight">\(s\)</span> tal que <span class="math notranslate nohighlight">\(s &lt; t\)</span>, entonces <span class="math notranslate nohighlight">\(N(s) &lt; N(t)\)</span>. (Vamos que si estoy sentado en un banco contando los coches que pasan, no pueden haber pasado 50 el primer minuto, y 10 en el siguiente, el conteo siempre es ascendente)</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(s&lt;t\)</span>, <span class="math notranslate nohighlight">\(N(t)-N(s)\)</span> cuenta el número de sucesos que hN ocurrido en el intervalo <span class="math notranslate nohighlight">\((s, t]\)</span></p></li>
+</ul>
+<p>Dado un proceso de recuento <span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span> vamos a hablar de dos propiedades que debe tener un proceso de Poisson, aunque estas propiedades también pueden describir un proceso estocástico general.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span> tiene <strong>incrementos independientes</strong> si haY independencia entre el número de sucesos ocurridos en intervalos de tiempo disjuntos. Esto es: dados cualesquiera <span class="math notranslate nohighlight">\(n\)</span> instantes de tiempo <span class="math notranslate nohighlight">\(0 \leq t_1 &lt; t_2 &lt;...&lt;t_n\)</span>, las variables <span class="math notranslate nohighlight">\(N(t_2)-N(t_1),...,N(t_n)-N(t_1)\)</span> son independientes.</p></li>
+</ol>
 </section>
 </section>
 
