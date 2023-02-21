@@ -392,12 +392,24 @@ title="Print to PDF"
      4.2.1. Cuestiones de existencia
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-proceso-de-poisson">
+     4.2.2. El proceso de Poisson
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#el-proceso-de-poisson">
-   4.3. El proceso de Poisson
+  <a class="reference internal nav-link" href="#proceso-de-poisson">
+   4.3. Proceso de Poisson
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicion-a-traves-de-sus-incrementos-infinitesimales">
+     4.3.1. Definición a través de sus incrementos infinitesimales
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -455,12 +467,24 @@ title="Print to PDF"
      4.2.1. Cuestiones de existencia
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-proceso-de-poisson">
+     4.2.2. El proceso de Poisson
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#el-proceso-de-poisson">
-   4.3. El proceso de Poisson
+  <a class="reference internal nav-link" href="#proceso-de-poisson">
+   4.3. Proceso de Poisson
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicion-a-traves-de-sus-incrementos-infinitesimales">
+     4.3.1. Definición a través de sus incrementos infinitesimales
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -571,13 +595,13 @@ w \Rightarrow w_t
 <section id="espacio-de-estados-discretos-y-continuos">
 <h3><span class="section-number">4.1.2. </span>Espacio de estados discretos y continuos<a class="headerlink" href="#espacio-de-estados-discretos-y-continuos" title="Permalink to this headline">#</a></h3>
 <p>El espacio de estados <span class="math notranslate nohighlight">\(E\)</span> es el subconjunto de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> que contiene todos los valores posibles de las variables aleatorias.</p>
-<p>Esto <em>CREO</em> que es lo mismo que el dominio. Esta profe le llama distinto pero conceptualmente es lo mismo. En el lanzamiento de un dado, las variables aleatorias toman valores en <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, pero el espacio de estados es <span class="math notranslate nohighlight">\(\{1,2,3,4,5,6\}\)</span></p>
+<p>Esto <em>CREO</em> que es lo mismo que el dominio. Esta profe le llama distinto pero conceptualmente es lo mismo. En el lanzamiento de un dado, las variables aleatorias toman valores en <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, pero el espacio de estados es <span class="math notranslate nohighlight">\(\{1,2,3,4,5,6\}\)</span>.</p>
 <p>Según los valores que pueda tomar el espacoio de estados, este será discreto o continuo:</p>
 <ul class="simple">
 <li><p>Procesos con espacio de estados <span class="math notranslate nohighlight">\(E\)</span> <strong>discreto</strong>:</p>
 <ul>
 <li><p>Número de clientes esperando en una cola: <span class="math notranslate nohighlight">\(E= 1,2,...\)</span></p></li>
-<li><p>Registros diarios de lluvias: $E = {0(no \hspace{0.5}em lluvia), 1 (lluvia)}</p></li>
+<li><p>Registros diarios de lluvias: <span class="math notranslate nohighlight">\(E = \{0(no \hspace{0.5em} lluvia), 1 (lluvia)\}\)</span></p></li>
 </ul>
 </li>
 <li><p>Procesos con espacio de estados <span class="math notranslate nohighlight">\(E\)</span> <strong>continuo</strong>:</p>
@@ -593,10 +617,17 @@ w \Rightarrow w_t
 <p>Si estamos observando un proceso, en cada instante de tiempo, podemos anotar lo que ha sucedido.</p>
 <p>Dado un elemento del espacio muestral <span class="math notranslate nohighlight">\(w \in \Omega\)</span>, una trayectoria del proceso está constituída por los valores concretos que que va tomando el proceso sobre ese elemento del espacio muestral para cada instante de tiempo <span class="math notranslate nohighlight">\(\{Z_t(w), t \in I\}\)</span></p>
 <p>También se le puede llamar función muestral o realización. Vamos con un example:</p>
-<p>IMAGEN</p>
+<aside class="sidebar">
 <p>Para el ejemplo de la imagen, el inicio <span class="math notranslate nohighlight">\(0\)</span> correspondería con el instante en el que abrimos la compañía. La trayectoria desde <span class="math notranslate nohighlight">\(0\)</span> hasta <span class="math notranslate nohighlight">\(T_1\)</span> sería de 0 reclamaciones.
 Después de que pase un tiempo aleatorio <span class="math notranslate nohighlight">\(t_1\)</span> llega la primera reclamación, y el contador sube a 1. Se mantiene en 1 hasta que pasa otro tiempo aleatorio <span class="math notranslate nohighlight">\(t_2\)</span> en el que llega la segunda reclamación.</p>
 <p>Es decir, la trayectoria asociada a este proceso que describe el número de reclamaciones hasta el instante <span class="math notranslate nohighlight">\(t\)</span> es <strong>una función</strong> que va pegando saltos en instantes aleatorios dependiendo de cuando sucedan las reclamaciones.</p>
+</aside>
+<figure class="align-left" id="id1">
+<a class="reference internal image-reference" href="_images/plot1.jpg"><img alt="_images/plot1.jpg" src="_images/plot1.jpg" style="width: 484.2px; height: 343.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">ola?</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="distribuciones-de-probabilidad-asociadas-a-un-proceso">
 <h3><span class="section-number">4.1.4. </span>Distribuciones de probabilidad asociadas a un proceso<a class="headerlink" href="#distribuciones-de-probabilidad-asociadas-a-un-proceso" title="Permalink to this headline">#</a></h3>
@@ -610,7 +641,7 @@ Después de que pase un tiempo aleatorio <span class="math notranslate nohighlig
 Es decir, dados instantes de tiempo pertenecientes al intervalo temporal, hay que indicar la distribución de las variables <span class="math notranslate nohighlight">\((Z_{t_1},..., Z_{t_n})\)</span></p>
 <div class="math notranslate nohighlight">
 \[(Z_{t_1},..., Z_{t_n}), \hspace{0.5em} para \hspace{0.5em} t_1,...,t_n \in I \]</div>
-<p>Si describo la distribución de probabilidades finito-dimensionales para cualesquiera intantes de tiempoy cualesquiera variables, hayaremos las distribuciones del proceso.</p>
+<p>Si describo la distribución de probabilidades finito-dimensionales para cualesquiera intantes de tiempo y cualesquiera variables, hayaré las distribuciones del proceso.</p>
 <p>Para los casos más sencillos me vale con dar la <strong>distribución de cada <span class="math notranslate nohighlight">\(Z_t\)</span></strong>, (se le llama marginal-unidimensional) y <strong>especificar las relaciones de dependencia</strong> de las variables del proceso.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Por ejemplo</p>
@@ -631,7 +662,7 @@ Es decir, dados instantes de tiempo pertenecientes al intervalo temporal, hay qu
 <li><p>con espacio de estados discreto <span class="math notranslate nohighlight">\(E = 1,2,...\)</span></p></li>
 </ul>
 <p>Es un proceso especialmente adecuado para describir, por ejemplo, el número de reclamaciones de una compañia de seguros.</p>
-<p>¿Cómo lo definimos? Las variables del proceso, que serán el número de reclamaciones recibidas hasta el instante <span class="math notranslate nohighlight">\(t\)</span> verificará:</p>
+<p>¿Cómo lo definimos? Las variables del proceso, que serán el número de reclamaciones recibidas hasta el instante <span class="math notranslate nohighlight">\(t\)</span>, verificará:</p>
 <ul class="simple">
 <li><p>El incremento de reclamaciones entre dos instantes de tiempo <span class="math notranslate nohighlight">\((Z_{t_2}-Z_{t_1})\)</span> es una distrinbución de Poisson de parámetro <span class="math notranslate nohighlight">\(\lambda(t_1-t_2)\)</span></p></li>
 <li><p>Los incrementos del proceso son independientes</p></li>
@@ -652,11 +683,9 @@ Es decir, dados instantes de tiempo pertenecientes al intervalo temporal, hay qu
 </ul>
 <p>Pero vamos, que no es mi lucha.</p>
 </section>
-</section>
 <section id="el-proceso-de-poisson">
-<h2><span class="section-number">4.3. </span>El proceso de Poisson<a class="headerlink" href="#el-proceso-de-poisson" title="Permalink to this headline">#</a></h2>
-<p>El proceso de Poisson es un proceso de recuento.</p>
-<p>Un proceso de recuento es un proceso en tiempo continuo tal que <span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span></p>
+<h3><span class="section-number">4.2.2. </span>El proceso de Poisson<a class="headerlink" href="#el-proceso-de-poisson" title="Permalink to this headline">#</a></h3>
+<p>Un proceso de Poisson es un proceso  <strong>de recuento</strong> en tiempo continuo tal que <span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span></p>
 <p><span class="math notranslate nohighlight">\(N(t)\)</span> puede representar:</p>
 <ul class="simple">
 <li><p>número de coches que pasan por un determinado punto de una carretera</p></li>
@@ -664,17 +693,113 @@ Es decir, dados instantes de tiempo pertenecientes al intervalo temporal, hay qu
 <li><p>número de reclamaciones de una compañia de seguros</p></li>
 </ul>
 <p>Es decir, un proceso de recuento es una sucesion de variables aleatorias <span class="math notranslate nohighlight">\(N(t)\)</span> cuyo espacio de estados es <span class="math notranslate nohighlight">\(\{0,1,2,3,...\}\)</span> porque van contando las cosas que pasan hasta un instante de tiempo.</p>
-<p>Pare definir algo que cuente las cosas que pasan hasta un instante de tiempo, ¿cuáles son las propiedades que le vamos a requerir a ese algo?</p>
+<p>Si lo que quiero es definir las cosas que pasan hasta un instante de tiempo, ¿Qué propiedades le voy a requerir a ese algo?</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(N(0) \geq 0\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(N(t)\)</span> toman valores en <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, en los naturales.</p></li>
-<li><p>El proceso de recuento me cuenta lo que ha sucedido hasta el instante <span class="math notranslate nohighlight">\(t\)</span>, luego si un instante <span class="math notranslate nohighlight">\(s\)</span> tal que <span class="math notranslate nohighlight">\(s &lt; t\)</span>, entonces <span class="math notranslate nohighlight">\(N(s) &lt; N(t)\)</span>. (Vamos que si estoy sentado en un banco contando los coches que pasan, no pueden haber pasado 50 el primer minuto, y 10 en el siguiente, el conteo siempre es ascendente)</p></li>
-<li><p>Para <span class="math notranslate nohighlight">\(s&lt;t\)</span>, <span class="math notranslate nohighlight">\(N(t)-N(s)\)</span> cuenta el número de sucesos que hN ocurrido en el intervalo <span class="math notranslate nohighlight">\((s, t]\)</span></p></li>
+<li><p>El proceso de recuento me cuenta lo que ha sucedido hasta el instante <span class="math notranslate nohighlight">\(t\)</span>. Luego, si un instante <span class="math notranslate nohighlight">\(s\)</span> tal que <span class="math notranslate nohighlight">\(s &lt; t\)</span>, entonces <span class="math notranslate nohighlight">\(N(s) &lt; N(t)\)</span>. (Vamos que si estoy sentado en un banco contando los coches que pasan, no pueden haber pasado 50 hasta el primer minuto, y 25 hasta el minuto 2. El conteo siempre es ascendente)</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(s&lt;t\)</span>, <span class="math notranslate nohighlight">\(N(t)-N(s)\)</span> cuenta el número de sucesos que han ocurrido en el intervalo <span class="math notranslate nohighlight">\((s, t]\)</span></p></li>
 </ul>
 <p>Dado un proceso de recuento <span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span> vamos a hablar de dos propiedades que debe tener un proceso de Poisson, aunque estas propiedades también pueden describir un proceso estocástico general.</p>
+<div class="admonition-propiedades-de-un-proceso-de-poisson admonition">
+<p class="admonition-title">Propiedades de un proceso de Poisson</p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span> tiene <strong>incrementos independientes</strong> si haY independencia entre el número de sucesos ocurridos en intervalos de tiempo disjuntos. Esto es: dados cualesquiera <span class="math notranslate nohighlight">\(n\)</span> instantes de tiempo <span class="math notranslate nohighlight">\(0 \leq t_1 &lt; t_2 &lt;...&lt;t_n\)</span>, las variables <span class="math notranslate nohighlight">\(N(t_2)-N(t_1),...,N(t_n)-N(t_1)\)</span> son independientes.</p></li>
+<li><p><span class="math notranslate nohighlight">\((N(t), t \geq 0)\)</span> tiene <strong>incrementos independientes</strong> si hay independencia entre el número de sucesos ocurridos en intervalos de tiempo disjuntos. Esto es: dados cualesquiera <span class="math notranslate nohighlight">\(n\)</span> instantes de tiempo <span class="math notranslate nohighlight">\(0 \leq t_1 &lt; t_2 &lt;...&lt;t_n\)</span>, las variables <span class="math notranslate nohighlight">\(N(t_2)-N(t_1),...,N(t_n)-N(t_1)\)</span> son independientes.</p></li>
+<li><p>Un proceso estocástico, o un proceso de recuento particular <span class="math notranslate nohighlight">\((N(t), t \leq 0)\)</span> tiene <strong>incrementos estacionarios</strong> si la distribución del número de sucesos ocurridos en un intervalor de tiempo depende de la longitud de ese intervalo, pero <strong>no</strong> del instante de observación.</p></li>
 </ol>
+<p>Es decir, si tomo in instante de tiempo <span class="math notranslate nohighlight">\(s \leq 0\)</span>, que es el origen de la observación, y un intervalo de tiempo <span class="math notranslate nohighlight">\(t &gt; 0\)</span>, la distribución de la variable <span class="math notranslate nohighlight">\(N(t+s)-N(s)\)</span> (el número de sucesos que han ocurrido entre <span class="math notranslate nohighlight">\(s\)</span> y <span class="math notranslate nohighlight">\(t\)</span>) va a coincidir con la distribución de de los incrementos si tomase <span class="math notranslate nohighlight">\(s = 0\)</span>, <span class="math notranslate nohighlight">\(N(t)-N(0)\)</span></p>
+<p>Decimos que los incrementos son estacionarios porque independientemente del instante en el que yo empiezo a observar, voy a observar los incrementos con la misma distribución.</p>
+<div class="dropdown admonition warning">
+<p class="admonition-title">Warning</p>
+<p>En algunos libros se utiliza una definición más general de incrementos estacionarios:</p>
+<p>Se dice que un proceso tiene incrementos estacionarios si la distribución del número de sucesos ocurridos en intervalos de tiempo disjuntos depende, en todo caso, de la longitud de estos, pero no del instante inicial de observación.</p>
+<p>Osea que si tomo un instante de tiempo arbitrario <span class="math notranslate nohighlight">\( s \leq 0\)</span>, que será el instante en el que empiezo a observar los incrementos del proceso, y tengo tiempos <span class="math notranslate nohighlight">\(0 \leq t_1&lt; t_2&lt;...&lt;tn\)</span>, los cuales me darán las longitudes de los intervalos de tiempo que quiero observar, y considero la distribución de la variable <span class="math notranslate nohighlight">\(n\)</span>-dimensional de incrementos <span class="math notranslate nohighlight">\(N(t_2 + s)-N(t_1 + s),...,N(t_n +s)-N(t_{n-1}+s)\)</span> (es decir, estoy observando los incrementos del procesopero comenzando en un instante arbitrario <span class="math notranslate nohighlight">\(s\)</span>), esta distribución coincidirá con la distribución de los incrementos <strong>si tomase <span class="math notranslate nohighlight">\(s = 0\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[ N(t_2 + s)-N(t_1 + s),...,N(t_n +s)-N(t_{n-1}+s) = N(t_2)-N(t_1),...,N(t_n)-N(t_{n-1}) \]</div>
+<p>Es decir, si <span class="math notranslate nohighlight">\(s = 0\)</span>, lo que yo observo desde aquí será lo mismo, en cuanto a cálculo de probabilidades que si yo me pusiese a observar el proceso a partir de un instante arbitrario <span class="math notranslate nohighlight">\(s\)</span>.</p>
+</div>
+<p>Bajo la condición de incrementos independientes, ambas definiciones de incrementos estacionarios (la de fuera del warning y la de dentro) son equivalentes.</p>
+</div>
+</section>
+</section>
+<section id="proceso-de-poisson">
+<h2><span class="section-number">4.3. </span>Proceso de Poisson<a class="headerlink" href="#proceso-de-poisson" title="Permalink to this headline">#</a></h2>
+<div class="dropdown admonition">
+<p class="admonition-title">Repaso distribución de Poisson</p>
+<p>Si tomamos <span class="math notranslate nohighlight">\(X\)</span> una v.a., decimos que <span class="math notranslate nohighlight">\(X\)</span> es un variable de Poisson de parámetro <span class="math notranslate nohighlight">\(\lambda\)</span> si verifica:</p>
+<div class="math notranslate nohighlight">
+\[P(X=k) = \frac{e^{-k}\lambda^{k}}{k!}, k= 0,1,...\]</div>
+<p>Es una v.a. adecuada para contar el número de sucesos (llamadas telefónicas por ejemplo) en un intervalo de tiempo.</p>
+<p>Algunas propiedades:</p>
+<ul class="simple">
+<li><p>Valor esperado: <span class="math notranslate nohighlight">\(E[X] = \sum^{\infty}_{k = 0}kP(X=k)=\lambda\)</span></p></li>
+<li><p>Varianza: <span class="math notranslate nohighlight">\(Var[X] = \lambda\)</span></p></li>
+</ul>
+<p>Si quiesiéramos calcular momentos que no fuesen ni la esperanza ni la varianza, podríamos recurrir a la función generatriz de momentos para la variable de Poisson.</p>
+<div class="math notranslate nohighlight">
+\[\psi(t) = Ee^{tX} = \sum^{\infty}_{k = 0}e^{tk}P(X=k) = e^{\lambda(e^t - 1)}, t \in \mathbb{R}\]</div>
+<p>Los momentos de una v.a. pueden calcularse a partir de la función generatriz de momentos (si esta existe en un entorno de origen) ya que se tiene que el valor esperado de <span class="math notranslate nohighlight">\(X^k\)</span> se puede obtener derivando la función generatriz de momentos <span class="math notranslate nohighlight">\(k\)</span> veces y aplicando la derivada en <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[EX^k = \left. \frac{d^k}{dt^k}\psi(t) \right|_{t=0}, k= 1,2,...\]</div>
+<p>Si tenemos una función generatriz de momentos sencilla, podemos calcular los momentos de una v.a sin necesidad de hacer excesivos cálculos.</p>
+</div>
+<p>Mucho ojo a todo esto porque se viene roca.</p>
+<p>Vamos a partir de las definiciones del libro de Ross, Capitulo 2. Aquí se presentan dos definiciones. Vamos con la primera:</p>
+<p>El proceso de Poisson es un proceso de recuento <span class="math notranslate nohighlight">\((N(t), t \leq 0)\)</span>. Diremos que es un proceso de Poisson de tasa <span class="math notranslate nohighlight">\(\lambda\)</span> si:</p>
+<ol class="simple">
+<li><p>Comienza en el origen <span class="math notranslate nohighlight">\((N(0) = 0)\)</span></p></li>
+<li><p>Tiene incrementos independientes</p></li>
+<li><p>Si tomo instantes de tiempo arbitrarios <span class="math notranslate nohighlight">\(s\)</span> tal que <span class="math notranslate nohighlight">\(t \leq 0\)</span>, entonces la distribución de los incrementos <span class="math notranslate nohighlight">\(N(t+s)-N(s)\)</span> va a tener distribución de Poisson de parámetro <span class="math notranslate nohighlight">\(\lambda t\)</span>. (multiplico el parámetro <span class="math notranslate nohighlight">\(\lambda\)</span> por la longitud del intervalo de tiempo de los incrementos). Esto es</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(N(t+s)-N(s) = n) = \frac{e^{-\lambda t}(\lambda t)^n}{n!}, n = 0,1,...\]</div>
+<p>La probabilidad de que un incremento de magnitud <span class="math notranslate nohighlight">\(t\)</span> valga <span class="math notranslate nohighlight">\(n\)</span> viene dada por la distribución de Poisson de parámetro <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Observaciónes</p>
+<p>La propiedad 3 verifica que el proceso de Poisson tiene la propiedad de incrementos estacionarios ya que los incrementos del proceso solo dependen de la magnitud del intervalo y no del instante inicial de observación.</p>
+<p>También por la propiedad 3 conozco el valor esperado del número de sucesos hasta el instante <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[EN(t) = \lambda t \]</div>
+<p>De ahí que se llame <em>tasa</em> a <span class="math notranslate nohighlight">\(\lambda\)</span> (número medio de sucesos por unidad de tiempo).</p>
+<p>Si <span class="math notranslate nohighlight">\(\lambda = 1\)</span>, llamamos a <span class="math notranslate nohighlight">\((N(t), t \leq 0)\)</span> proceso de Poisson estándar.</p>
+</div>
+<p>Para determinar si un proceso de recuento arbitrario es en realidad un proceso de Poisson, debemos demostrar que se satisfacenm als condiciones 1, 2 y 3. La condición 1, que simplemente establece que el recuento de eventos comienza en el momento <span class="math notranslate nohighlight">\(t=0\)</span>, y la condición 2 generalmente se pueden verificar a partir de nuestro conocimiento del proceso. Pero no está del todo claro cómo determinamos el cumplimiento de la condición 3 y por esa razón es útil una definición equivalente de un proceso de Poisson.</p>
+<p>Ahí va la senda definición que presenta el Ross ~~este de los huevos~~</p>
+<section id="definicion-a-traves-de-sus-incrementos-infinitesimales">
+<h3><span class="section-number">4.3.1. </span>Definición a través de sus incrementos infinitesimales<a class="headerlink" href="#definicion-a-traves-de-sus-incrementos-infinitesimales" title="Permalink to this headline">#</a></h3>
+<p>El proceso de Poisson también se puede definir de la siguiente manera. Tenemos un proceso de recuento <span class="math notranslate nohighlight">\((N(t), t \leq 0)\)</span>. Podría decir que este proceso es un proceso de Poisson de tasa <span class="math notranslate nohighlight">\(\lambda\)</span> si verifica:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Dada una función <span class="math notranslate nohighlight">\(f\)</span>, diré que <span class="math notranslate nohighlight">\(f\)</span> es una <span class="math notranslate nohighlight">\(o(h)\)</span> si  <span class="math notranslate nohighlight">\(\lim_{h\to 0}\frac{f(h)}{h}=0\)</span>
+A <span class="math notranslate nohighlight">\(o(h)\)</span> le llama una o pequeña de h. Muy bien. Todo ok.
+<span class="math notranslate nohighlight">\(N(h)\)</span>: incremento infinitesimal</p>
+</aside>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(N(0) = 0\)</span></p></li>
+<li><p>El proceso tiene incrementos estacionarios e independientes</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(N(h) = 1) = \lambda h + o(h)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(N(h) \leq 2) = o(h)\)</span></p></li>
+</ol>
+<p>La propiedad 3 nos cuantifica la probabilidad de la ocurrencia de <em>un</em> suceso en un incremento infinitesimal, mientras que la propiedad 4 nos cuantifica la probabilidad de que ocurran <em>dos</em> sucesos en un incremento infinitesimal. Entonces, en un incremento infinitesimal, o puede pasar una cosa o pueden pasar cero cosas. La probabilidad de que sucedan más cosas es irrelevante.</p>
+<p>Osea, si soy capaz de entender esto, la prob 4 quiere decir que en un incremento infinitesimal <span class="math notranslate nohighlight">\(N(h)\)</span>, la prob de que ocurran 2 o más sucesos es irrelevante? ¿<span class="math notranslate nohighlight">\(o(h)\)</span> es la notación para describir irrelevante? ¿NO VALE EL 0 O QUÉ? Enfin. Me están poniendo negro ya. ~~Puta peña.~~</p>
+<p>Dicho de otro modo: las propiedades 3 y 4 nos indican que los incrementos infinitesimales del proceso son de magnitud 0 o 1.</p>
+<p>Vale pues ahora Ross nos dice que ambas definiciones son EQUIVALENTES. Y que una implica la otra y viceversa.</p>
+<p>Para eso define:</p>
+<div class="math notranslate nohighlight">
+\[P_n(t) = P(N(t) = n)\]</div>
+<p>Sin más que esto no es nada en principio, solo otra manera de llamar a la probabilidad de que en el instante <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(N(t) = n\)</span></p>
+<p>Entonces, empezamos con el caso de n = 0, y te plasma lo siguiente en el libro sin explicación alguna:</p>
+<div class="math notranslate nohighlight">
+\[P_0(t+h) = P(N(t+h) = 0)\]</div>
+<p>¿Qué tiene que pasar para que o cosas en este intervalo?</p>
+<p><img alt="Drag Racing" src="incrementos.png" /></p>
+<p>Pues que tienen que pasar 0 cosas desde 0 a <span class="math notranslate nohighlight">\(t\)</span> (<span class="math notranslate nohighlight">\(N(t)=0\)</span>), y otras 0 cosas desde <span class="math notranslate nohighlight">\(t\)</span> ahsta <span class="math notranslate nohighlight">\(t+h\)</span> (<span class="math notranslate nohighlight">\(N(t+h)-N(t) = 0\)</span>). Vale pues entonces :</p>
+<div class="math notranslate nohighlight">
+\[P_0(t+h) = P(N(t+h) = 0) = P(N(t)=0,N(t+h)-N(t) = 0)\]</div>
+<p>Ahora, por la propiedad de incrementos independientes digo:</p>
+<div class="math notranslate nohighlight">
+\[P(N(t)=0,N(t+h)-N(t) = 0) = P(N(t)=0)P(N(t+h)-N(t) = 0)\]</div>
+</section>
 </section>
 </section>
 

@@ -8,6 +8,7 @@ jupyter-book = "*"
 ghp-import = "*"
 matplotlib = "*"
 scipy = "*"
+jupyterlab = "*"
 
 [dev-packages]
 

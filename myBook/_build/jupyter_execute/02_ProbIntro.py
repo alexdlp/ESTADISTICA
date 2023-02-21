@@ -59,13 +59,13 @@
 # 
 # El *espacio muestral* $\Omega$ es el conjunto que contiene **todos los posibles resultados/sucesos de un determinado experimento**. 
 # 
-# El *dominio* de una v.a. es el conjunto de todos los valores posibles de esta variable aleatoria puede tomar. Se denota:
+# El *dominio* de una v.a. es el conjunto de todos los valores posibles que esta variable aleatoria puede tomar. Se denota:
 # 
 # $$D_X = \{x \in \mathbb{R} | P_X(x) > 0\}$$
 # 
 # El dominio de una v.a. es lo mismo que el espacio muestral ($X(\Omega) = D_X$) en caso de que los valores $x$ que pueda tomar la V.A. $X$ sean numéricos. 
 # 
-# Por ejemplo en el caso del dado, sí se da esa condición; sin embargo, en el caso del experimento de la botella, su espacio muestral es $\Omega = \{éxito, fracaso\} $, pero su dominio, $D_X  = \{1,0 \}$
+# Por ejemplo en el caso del dado, sí se da esa condición. Sin embargo, en el caso del experimento de la botella, su espacio muestral es $\Omega = \{éxito, fracaso\} $, pero su dominio es $D_X  = \{1,0 \}$
 
 # # Funciones de las Variables Aleatorias
 # Ahora que tenemos un chisme para transformar los **sucesos* en *números**, necesitamos otra herramienta que nos ayude a entender el **comportamiento** de esos sucesos.
